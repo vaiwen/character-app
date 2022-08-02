@@ -81,10 +81,18 @@ h1 {
   font-size: 25px;
   text-align: center;
   align-self: center;
-  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 p {
   font-size: 20px;
   margin-left: 12px;
 }
+
+hr {
+  width: 100%;
+  border: 1px solid black;
+  border-width: 3px;
+}
+

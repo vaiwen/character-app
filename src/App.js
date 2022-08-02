@@ -5,16 +5,16 @@ import CharacterList from './components/CharacterList';
 import Search from './components/Search';
 
 function App() {
+  const {search, setSearch } = useContext(CharacterContext)
   const { fetchCharacters } = useContext(CharacterContext)
-  const { setSearch } = useContext(CharacterContext)
 
   useEffect(() => {
     fetchCharacters()
-  }, [setSearch])
+  }, [search])
 
   return (
     <div className="App">
-      <Search setSearch={setSearch} />
+      <Search setSearch={setSearch} search={search} />
       <CharacterList />
     </div>
   )
